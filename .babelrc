@@ -1,0 +1,5 @@
+{
+  "presets": ["es2015", "stage-1", "react"],
+  "retainLines": true,
+  "plugins": ["babel-plugin-transform-decorators-legacy"]
+}
