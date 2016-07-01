@@ -1,6 +1,7 @@
 import * as actionObject from '../src/actionObject';
-import { compose, createStore, applyMiddleware } from 'redux';
+import { compose, createStore } from 'redux';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
 
 function createSampleStore(object, ...enhancers) {
   const { reducer, actionCreators } = actionObject.split(object);
@@ -62,7 +63,7 @@ describe('ActionObject test', function() {
   });
 
   it('handle arrays in state', function() {
-    const { store, actions } = createSampleStore({
+    const { store } = createSampleStore({
       a: [1, 2, 3]
     });
 

@@ -8,7 +8,7 @@ import * as actionObject from './src/actionObject';
 
 // utils
 
-function classnames() {
+function classNames() {
   let classes = [];
 
   for (let i = 0; i < arguments.length; i++) {
@@ -45,7 +45,7 @@ class TodoModel {
 
   add(text) {
     actionObject.sideEffect(function() {
-      console.log('Saving TODOs side effect');
+      // console.log('Saving TODOs side effect');
 
       localStorage.todos = JSON.stringify(this.todos);
     });
@@ -64,7 +64,7 @@ class TodoModel {
 
   loadTodos() {
     actionObject.sideEffect(function() { // no need to pass dispatch, b/c this contains bound action creators
-      console.log('Loading TODOs side effect');
+      // console.log('Loading TODOs side effect');
 
       actions.setTodos(localStorage.todos ? JSON.parse(localStorage.todos) : []);
     });
@@ -167,7 +167,7 @@ class TodoTextInput extends React.Component {
   render() {
     return (
         <input className={
-        classnames({
+        classNames({
           edit: this.props.editing,
           'new-todo': this.props.newTodo
         })}
@@ -268,7 +268,7 @@ class TodoItem extends React.Component {
     }
 
     return (
-        <li className={classnames({
+        <li className={classNames({
         completed: todo.completed,
         editing: this.state.editing
       })}>
