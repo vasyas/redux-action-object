@@ -1,6 +1,11 @@
 redux-action-object
 =============
 
+[![NPM version][npm-image]][npm-url]
+[![Dependencies][dependencies]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Downloads][downloads-image]][downloads-url]
+
 Define your Redux actions and reducers using object literal or ES6 class syntax. Also, a handy method for working with side effects.
 
 ## Show me the code
