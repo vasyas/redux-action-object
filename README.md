@@ -4,7 +4,6 @@ redux-action-object
 [![NPM version][npm-image]][npm-url]
 [![Dependencies][dependencies]][npm-url]
 [![Build status][travis-image]][travis-url]
-[![Downloads][downloads-image]][downloads-url]
 
 Define your Redux actions and reducers using object literal or ES6 class syntax. Also, a handy method for working with side effects.
 
@@ -230,3 +229,9 @@ http://localhost:3000/
 ## Contribution
 
 Feel free to create an issue or send a PR
+
+[npm-image]: https://img.shields.io/npm/v/redux-action-object.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/redux-action-object
+[travis-image]: https://img.shields.io/travis/vasyas/redux-action-object.svg?style=flat-square
+[travis-url]: https://travis-ci.org/vasyas/redux-action-object
+[dependencies]: https://david-dm.org/vasyas/redux-action-object.svg
