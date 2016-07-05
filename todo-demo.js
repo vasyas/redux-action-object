@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { createStore, compose } from 'redux';
 import { Provider, connect } from 'react-redux';
 
-import * as actionObject from './src/actionObject';
+import * as actionObject from './src';
 
 
 // utils

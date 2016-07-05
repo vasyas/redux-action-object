@@ -1,4 +1,4 @@
-import * as actionObject from '../src/actionObject';
+import * as actionObject from '../src';
 import { compose, createStore } from 'redux';
 import { expect } from 'chai';
 import { describe, it } from 'mocha';

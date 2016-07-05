@@ -1,23 +1,36 @@
 {
   "name": "redux-action-object",
   "version": "0.0.1",
-  "description": "Creates Redux actions using classes",
-  "main": "index.js",
+  "description": "Define your Redux actions and reducers using object literal or ES6 class syntax",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
-    "start": "webpack-dev-server --config webpack-demo.config.js --colors",
-    "test": "mocha --require source-map-support/register --compilers js:babel-core/register test"
+    "build:lib": "./node_modules/.bin/babel src --out-dir lib",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack-demo.config.js --colors",
+    "test": "./node_modules/.bin/mocha --require source-map-support/register --compilers js:babel-core/register test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasyas/redux-action-object.git"
   },
   "keywords": [
     "reactjs",
     "redux",
+    "side",
+    "effects",
+    "class",
     "js"
   ],
-  "author": "",
+  "author": "Vasyl Stashuk <vasyl@stashuk.com>",
   "license": "ISC",
   "dependencies": {
     "redux": "^3.5.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
