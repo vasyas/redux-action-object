@@ -56,7 +56,7 @@ using ES6 classes.
 ## Usage
 
 You start with creating a class for you model. Class may contain properties and methods. Class properties are used
-to define initial state. Methods are used to define reducers and actions:
+to define initial state. Member functions are used to define reducers and actions:
 
 
 ```javascript

@@ -1,6 +1,6 @@
 {
   "name": "redux-action-object",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Define your Redux actions and reducers using object literal or ES6 class syntax",
   "main": "lib/index.js",
   "files": [
