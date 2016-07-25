@@ -50,13 +50,13 @@ When using conventional Redux code related to actions become spread across diffe
 
 So when you add a new action or modify existing one you need to make changes in at least 3 different places.
 
-**Redux-action-object** helps this by enabling you to simoultaneously define actions and reducers in the same code constructs,
+**Redux-action-object** helps this by enabling you to simultaneously define actions and reducers in the same code constructs,
 using ES6 classes.
 
 ## Usage
 
-You start with creating a class for you model. Class may contain properties and methods. Class properties are used
-to define initial state. Member functions are used to define reducers and actions:
+You start with creating a class for you model. The class may contain properties and methods. Class properties are used
+to define the initial state. Member functions are used to define reducers and actions:
 
 
 ```javascript
@@ -90,7 +90,7 @@ import * as actionObject from 'redux-action-object';
 const { actionCreators, reducer } = actionObject.split(new TodoModel());
 ```
 
-*actionCreators* is an object with property keys equals to method names in the model. Property values are Redux action
+*actionCreators* is an object with property keys equals to the method names in the model. Property values are Redux action
 creators. Action type will be equals to method name. For the code above, actionCreators will be:
 
 ```
@@ -142,8 +142,8 @@ add(text) { // reducer function
 }
 ```
 
-Side effect function will be called after executing reducer. Whiling side effect, *this* will be pointing to actual
-store state. It means that side effect can use reducer results, like in the above example.
+Side effect function will be called after executing reducer. Inside side effect, *this* will be pointing to actual
+store state. It means that the side effect can use reducer results, like in the above example.
 
 To enable side effects you need to use *actionObject.withSideEffects* while creating Redux store:
 
@@ -229,6 +229,10 @@ http://localhost:3000/
 ## Contribution
 
 Feel free to create an issue or send a PR
+
+## License
+
+MIT. See [LICENSE](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/redux-action-object.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/redux-action-object
