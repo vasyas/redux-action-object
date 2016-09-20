@@ -212,6 +212,35 @@ const actions = actionObject.bind(actionCreators, store.dispatch);
 actions.nested.inner(3);
 ```
 
+#### Define action creators in models
+
+```javascript
+import * as actionObject from 'redux-action-object';
+
+let model = {
+  a: 1,
+  
+  findUserRequest: actionObject.creator(() =>
+      fetch('/api/findUser')
+  )
+};
+```
+
+or
+
+```javascript
+import * as actionObject from 'redux-action-object';
+
+class Model {
+  a = 1;
+  
+  @actionObject.creator
+  findUserRequest() {
+    return fetch('/api/findUser')
+  }
+}
+```
+
 ## Full example
 
 Full example is located in *todo-demo.js* file. To start it, run
