@@ -129,4 +129,19 @@ describe('ActionObject test', function() {
 
         expect(actionCreators.func).to.eql(model.func);
     });
+
+    it('supports creator annotation for classes', function() {
+        const model = new class {
+            a = 1;
+
+            @actionObject.creator
+            func() {
+                return 5;
+            }
+        };
+
+        const { actionCreators } = actionObject.split(model);
+
+        expect(actionCreators.func()).to.eql(5);
+    });
 });
