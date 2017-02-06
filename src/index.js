@@ -15,7 +15,7 @@ function resolve(obj, path) {
 function splitObject(object, prefix = '', creators = {}, initialState = {}, methods = {}) {
     Object.getOwnPropertyNames(object).forEach(key => {
         if (typeof object[key] == 'function') {
-            if (object[key].prototype.creator) {
+            if (object[key].creator) {
                 creators[key] = object[key];
             } else {
                 creators[key] = function() {
@@ -87,7 +87,7 @@ export function split(object) {
 export function creator(target, name = undefined, descriptor = undefined) {
     const action = descriptor ? descriptor.value : target;
 
-    action.prototype.creator = true;
+    action.creator = true;
     return action;
 }
 
